@@ -10,4 +10,12 @@
 
 @implementation DPPerson
 
+- (void)visitPerson:(DPPerson *)person {
+    [person receivePerson:self];
+}
+
+- (void)receivePerson:(DPPerson *)person {
+    NSLog(@"Hi, welcome!");
+}
+
 @end

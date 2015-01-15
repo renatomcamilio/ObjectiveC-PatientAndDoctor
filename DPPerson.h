@@ -12,4 +12,7 @@
 
 @property (nonatomic, strong) NSString *name;
 
+- (void)visitPerson:(DPPerson *)person;
+- (void)receivePerson:(DPPerson *)person;
+
 @end

@@ -7,6 +7,7 @@
 //
 
 #import "DPDoctor.h"
+#import "DPPatient.h"
 
 @implementation DPDoctor
 
@@ -18,12 +19,35 @@
     return [NSString stringWithFormat:@"My name is %@", self.name];
 }
 
+- (void)trackPatient:(DPPatient *)patient {
+    NSLog(@"So, how may I help you with, %@?", patient.name);
+    [self.acceptedPatients addObject:patient];
+}
+
+- (void)receivePerson:(DPPerson *)person {
+    [super receivePerson:person];
+    
+    if ([person isKindOfClass:[DPPatient class]]) {
+        DPPatient *patient = (DPPatient *)person;
+        
+        if (patient.hasHealthCard) {
+            [self trackPatient:patient];
+        } else {
+            NSLog(@"Sorry, %@! You don't have a card.", patient.name);
+        }
+    } else {
+        NSLog(@"You're just visiting me, isn'st you?");
+    }
+}
+
+#pragma mark - Initialization
 - (id)initWithName:(NSString *)name andSpecialization:(NSString *)specialization {
     self = [super init];
     
     if (self) {
         self.name = name;
         self.specialization = specialization;
+        self.acceptedPatients = [[NSMutableArray alloc] init];
     }
     
     return self;
@@ -31,7 +55,10 @@
 
 #pragma mark - Override
 - (NSString *)description {
-    return [NSString stringWithFormat:@"name: %@\nspecialization: %@\n", self.name, self.specialization];
+    return [NSString stringWithFormat:@"name: %@\nspecialization: %@\nacceptedPatients: %@",
+            self.name,
+            self.specialization,
+            self.acceptedPatients];
 }
 
 @end

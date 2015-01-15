@@ -7,6 +7,7 @@
 //
 
 #import "DPPatient.h"
+#import "DPDoctor.h"
 
 @implementation DPPatient
 
@@ -22,13 +23,15 @@
     return [NSString stringWithFormat:@"I'm %@ years old", self.age];
 }
 
-- (id)initWithName:(NSString *)name andAge:(NSNumber *)age andOccupation:(NSString *)occupation {
+#pragma mark - Initialization
+- (id)initWithName:(NSString *)name andAge:(NSNumber *)age andOccupation:(NSString *)occupation andHasHealthCard:(BOOL)hasHealthCard {
     self = [super init];
     
     if (self) {
         self.name = name;
         self.age = age;
         self.occupation = occupation;
+        self.hasHealthCard = hasHealthCard;
     }
     
     return self;

@@ -13,11 +13,11 @@
 
 @property (nonatomic, strong) NSNumber *age;
 @property (nonatomic, strong) NSString *occupation;
+@property (readwrite) BOOL hasHealthCard;
 
 - (NSString *)whatIsYourName;
 - (NSString *)whatIsYourOccupation;
 - (NSString *)howOldAreYou;
-
-- (id)initWithName:(NSString *)name andAge:(NSNumber *)age andOccupation:(NSString *)occupation;
+- (id)initWithName:(NSString *)name andAge:(NSNumber *)age andOccupation:(NSString *)occupation andHasHealthCard:(BOOL)hasHealthCard;
 
 @end

@@ -9,12 +9,16 @@
 #import <Foundation/Foundation.h>
 #import "DPPerson.h"
 
+@class DPPatient;
+
 @interface DPDoctor : DPPerson
 
 @property (nonatomic, strong) NSString *specialization;
+@property (nonatomic, strong) NSMutableArray *acceptedPatients;
 
 - (NSString *)whatIsYourSpecialization;
 - (NSString *)whatIsYourName;
+- (void)trackPatient:(DPPatient *)patient;
 
 - (id)initWithName:(NSString *)name andSpecialization:(NSString *)specialization;
 
