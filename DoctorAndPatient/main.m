@@ -19,18 +19,12 @@ int main(int argc, const char * argv[]) {
                                                       andAge:@48
                                                andOccupation:@"Cellphone maker"
                                             andHasHealthCard:YES];
-
-        DPPatient *patient2 = [[DPPatient alloc] initWithName:@"Apple"
-                                                      andAge:@20
-                                                andOccupation:@"Fruit"
-                                            andHasHealthCard:NO];
-
-        DPPerson *visitor = [[DPPerson alloc] init];
-        visitor.name = @"Eleonor";
-        
         [patient visitPerson:doctor];
-        [patient2 visitPerson:doctor];
-        [visitor visitPerson:doctor];
+        
+        NSLog(@"%@", [doctor requestMedication:@[@"headache",
+                                                 @"stomach pain",
+                                                 @"weight loss"]
+                                    forPatient:patient]);
     }
     
     return 0;

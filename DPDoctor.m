@@ -40,6 +40,17 @@
     }
 }
 
+- (NSString *)requestMedication:(NSArray *)symptoms forPatient:(DPPatient *)patient {
+    if ([self.acceptedPatients containsObject:patient]) {
+        DPDoctorSymptomsKnowledgeBase *knowledgeBase = [[DPDoctorSymptomsKnowledgeBase alloc] init];
+        
+        return [knowledgeBase prescriptionForSymptoms:symptoms];
+    }
+
+    return [NSString stringWithFormat:@"Sorry %@, but you need to visit me first, so I can know you better before prescripting anything.",
+            patient.name];
+}
+
 #pragma mark - Initialization
 - (id)initWithName:(NSString *)name andSpecialization:(NSString *)specialization {
     self = [super init];
