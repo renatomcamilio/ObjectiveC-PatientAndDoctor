@@ -7,11 +7,17 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "DPDoctor.h"
+#import "DPPatient.h"
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
-        // insert code here...
-        NSLog(@"Hello, World!");
+        
+        DPDoctor *doctor = [[DPDoctor alloc] initWithName:@"Renato" andSpecialization:@"Butcher"];
+        DPPatient *patient = [[DPPatient alloc] initWithName:@"Motorola" andAge:@48 andOccupation:@"Cellphone maker"];
+        
+        NSLog(@"%@", [doctor whatIsYourName]);
+        NSLog(@"%@", [patient whatIsYourOccupation]);
     }
     return 0;
 }
