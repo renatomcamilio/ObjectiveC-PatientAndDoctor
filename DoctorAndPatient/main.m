@@ -16,8 +16,8 @@ int main(int argc, const char * argv[]) {
         DPDoctor *doctor = [[DPDoctor alloc] initWithName:@"Renato" andSpecialization:@"Butcher"];
         DPPatient *patient = [[DPPatient alloc] initWithName:@"Motorola" andAge:@48 andOccupation:@"Cellphone maker"];
         
-        NSLog(@"%@", [doctor whatIsYourName]);
-        NSLog(@"%@", [patient whatIsYourOccupation]);
+        NSLog(@"%@", doctor);
+        NSLog(@"%@", patient);
     }
     return 0;
 }

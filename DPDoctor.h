@@ -7,14 +7,15 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "DPPerson.h"
 
-@interface DPDoctor : NSObject
+@interface DPDoctor : DPPerson
 
-@property (nonatomic, strong) NSString *name;
 @property (nonatomic, strong) NSString *specialization;
 
 - (NSString *)whatIsYourSpecialization;
 - (NSString *)whatIsYourName;
+
 - (id)initWithName:(NSString *)name andSpecialization:(NSString *)specialization;
 
 @end

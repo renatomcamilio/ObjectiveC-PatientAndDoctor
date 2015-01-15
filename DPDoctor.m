@@ -22,15 +22,16 @@
     self = [super init];
     
     if (self) {
-        _name = name;
-        _specialization = specialization;
+        self.name = name;
+        self.specialization = specialization;
     }
     
     return self;
 }
 
-- (id)init {
-    return [self initWithName:@"No name" andSpecialization:@"Sans nom"];
+#pragma mark - Override
+- (NSString *)description {
+    return [NSString stringWithFormat:@"name: %@\nspecialization: %@\n", self.name, self.specialization];
 }
 
 @end

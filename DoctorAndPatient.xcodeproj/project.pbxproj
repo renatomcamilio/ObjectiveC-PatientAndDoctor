@@ -10,6 +10,7 @@
 		8832DB571A683C6B0078B0A4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8832DB561A683C6B0078B0A4 /* main.m */; };
 		8832DB621A683D140078B0A4 /* DPDoctor.m in Sources */ = {isa = PBXBuildFile; fileRef = 8832DB611A683D140078B0A4 /* DPDoctor.m */; };
 		8832DB651A683EB60078B0A4 /* DPPatient.m in Sources */ = {isa = PBXBuildFile; fileRef = 8832DB641A683EB60078B0A4 /* DPPatient.m */; };
+		8832DB681A684B2F0078B0A4 /* DPPerson.m in Sources */ = {isa = PBXBuildFile; fileRef = 8832DB671A684B2F0078B0A4 /* DPPerson.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -31,6 +32,8 @@
 		8832DB611A683D140078B0A4 /* DPDoctor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DPDoctor.m; sourceTree = "<group>"; };
 		8832DB631A683EB60078B0A4 /* DPPatient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DPPatient.h; sourceTree = "<group>"; };
 		8832DB641A683EB60078B0A4 /* DPPatient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DPPatient.m; sourceTree = "<group>"; };
+		8832DB661A684B2F0078B0A4 /* DPPerson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DPPerson.h; sourceTree = "<group>"; };
+		8832DB671A684B2F0078B0A4 /* DPPerson.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DPPerson.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +50,8 @@
 		8832DB4A1A683C6B0078B0A4 = {
 			isa = PBXGroup;
 			children = (
+				8832DB661A684B2F0078B0A4 /* DPPerson.h */,
+				8832DB671A684B2F0078B0A4 /* DPPerson.m */,
 				8832DB601A683D140078B0A4 /* DPDoctor.h */,
 				8832DB611A683D140078B0A4 /* DPDoctor.m */,
 				8832DB631A683EB60078B0A4 /* DPPatient.h */,
@@ -128,6 +133,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8832DB681A684B2F0078B0A4 /* DPPerson.m in Sources */,
 				8832DB621A683D140078B0A4 /* DPDoctor.m in Sources */,
 				8832DB651A683EB60078B0A4 /* DPPatient.m in Sources */,
 				8832DB571A683C6B0078B0A4 /* main.m in Sources */,
@@ -244,6 +250,7 @@
 				8832DB5C1A683C6B0078B0A4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

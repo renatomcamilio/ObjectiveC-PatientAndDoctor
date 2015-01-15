@@ -26,12 +26,17 @@
     self = [super init];
     
     if (self) {
-        _name = name;
-        _age = age;
-        _occupation = occupation;
+        self.name = name;
+        self.age = age;
+        self.occupation = occupation;
     }
     
     return self;
+}
+
+#pragma mark - Override
+- (NSString *)description {
+    return [NSString stringWithFormat:@"name: %@\nage: %@\noccupation: %@\n", self.name, self.age, self.occupation];
 }
 
 @end
