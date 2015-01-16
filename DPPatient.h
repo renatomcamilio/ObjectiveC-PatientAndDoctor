@@ -9,6 +9,8 @@
 #import <Foundation/Foundation.h>
 #import "DPPerson.h"
 
+@class DPDoctor;
+
 @interface DPPatient : DPPerson
 
 @property (nonatomic, strong) NSNumber *age;

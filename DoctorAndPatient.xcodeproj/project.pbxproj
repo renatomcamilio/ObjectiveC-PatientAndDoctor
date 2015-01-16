@@ -12,6 +12,7 @@
 		8832DB651A683EB60078B0A4 /* DPPatient.m in Sources */ = {isa = PBXBuildFile; fileRef = 8832DB641A683EB60078B0A4 /* DPPatient.m */; };
 		8832DB681A684B2F0078B0A4 /* DPPerson.m in Sources */ = {isa = PBXBuildFile; fileRef = 8832DB671A684B2F0078B0A4 /* DPPerson.m */; };
 		8832DB6B1A686CE60078B0A4 /* DPDoctorSymptomsKnowledgeBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 8832DB6A1A686CE60078B0A4 /* DPDoctorSymptomsKnowledgeBase.m */; };
+		8832DB711A6891AB0078B0A4 /* DPPatientPrescriptionsBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 8832DB701A6891AB0078B0A4 /* DPPatientPrescriptionsBase.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -37,6 +38,8 @@
 		8832DB671A684B2F0078B0A4 /* DPPerson.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DPPerson.m; sourceTree = "<group>"; };
 		8832DB691A686CE60078B0A4 /* DPDoctorSymptomsKnowledgeBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DPDoctorSymptomsKnowledgeBase.h; sourceTree = "<group>"; };
 		8832DB6A1A686CE60078B0A4 /* DPDoctorSymptomsKnowledgeBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DPDoctorSymptomsKnowledgeBase.m; sourceTree = "<group>"; };
+		8832DB6F1A6891AB0078B0A4 /* DPPatientPrescriptionsBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DPPatientPrescriptionsBase.h; sourceTree = "<group>"; };
+		8832DB701A6891AB0078B0A4 /* DPPatientPrescriptionsBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DPPatientPrescriptionsBase.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +58,8 @@
 			children = (
 				8832DB691A686CE60078B0A4 /* DPDoctorSymptomsKnowledgeBase.h */,
 				8832DB6A1A686CE60078B0A4 /* DPDoctorSymptomsKnowledgeBase.m */,
+				8832DB6F1A6891AB0078B0A4 /* DPPatientPrescriptionsBase.h */,
+				8832DB701A6891AB0078B0A4 /* DPPatientPrescriptionsBase.m */,
 				8832DB661A684B2F0078B0A4 /* DPPerson.h */,
 				8832DB671A684B2F0078B0A4 /* DPPerson.m */,
 				8832DB601A683D140078B0A4 /* DPDoctor.h */,
@@ -143,6 +148,7 @@
 				8832DB621A683D140078B0A4 /* DPDoctor.m in Sources */,
 				8832DB651A683EB60078B0A4 /* DPPatient.m in Sources */,
 				8832DB571A683C6B0078B0A4 /* main.m in Sources */,
+				8832DB711A6891AB0078B0A4 /* DPPatientPrescriptionsBase.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

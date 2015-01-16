@@ -14,17 +14,21 @@ int main(int argc, const char * argv[]) {
     @autoreleasepool {
         
         DPDoctor *doctor = [[DPDoctor alloc] initWithName:@"Renato" andSpecialization:@"Butcher"];
+        DPDoctor *doctor2 = [[DPDoctor alloc] initWithName:@"John" andSpecialization:@"Neuro"];
         
         DPPatient *patient = [[DPPatient alloc] initWithName:@"Motorola"
                                                       andAge:@48
                                                andOccupation:@"Cellphone maker"
                                             andHasHealthCard:YES];
         [patient visitPerson:doctor];
+        [doctor requestMedication:@[@"headache",
+                                    @"stomach pain",
+                                    @"weight loss"]
+                       forPatient:patient];
         
-        NSLog(@"%@", [doctor requestMedication:@[@"headache",
-                                                 @"stomach pain",
-                                                 @"weight loss"]
-                                    forPatient:patient]);
+        [patient visitPerson:doctor2];
+        [doctor2 requestMedication:@[@"headache"]
+                       forPatient:patient];
     }
     
     return 0;

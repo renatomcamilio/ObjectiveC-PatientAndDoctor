@@ -8,6 +8,8 @@
 
 #import "DPDoctor.h"
 #import "DPPatient.h"
+#import "DPDoctorSymptomsKnowledgeBase.h"
+#import "DPPatientPrescriptionsBase.h"
 
 @implementation DPDoctor
 
@@ -40,13 +42,24 @@
     }
 }
 
-- (NSString *)requestMedication:(NSArray *)symptoms forPatient:(DPPatient *)patient {
+- (void)requestMedication:(NSArray *)symptoms forPatient:(DPPatient *)patient {
+    [self writePrescription:symptoms forPatient:patient];
+}
+
+#pragma mark - Private stuff
+- (NSString *)writePrescription:(NSArray *)symptoms forPatient:(DPPatient *)patient {
+    NSString *prescription = [[NSString alloc] init];
+    
     if ([self.acceptedPatients containsObject:patient]) {
         DPDoctorSymptomsKnowledgeBase *knowledgeBase = [[DPDoctorSymptomsKnowledgeBase alloc] init];
         
-        return [knowledgeBase prescriptionForSymptoms:symptoms];
+        prescription = [knowledgeBase prescriptionForSymptoms:symptoms];
+        DPPatientPrescriptionsBase *prescriptionBase = [DPPatientPrescriptionsBase sharedInstance];
+        [prescriptionBase addPrescription:prescription withPatient:patient];
+        
+        return prescription;
     }
-
+    
     return [NSString stringWithFormat:@"Sorry %@, but you need to visit me first, so I can know you better before prescripting anything.",
             patient.name];
 }
@@ -66,10 +79,7 @@
 
 #pragma mark - Override
 - (NSString *)description {
-    return [NSString stringWithFormat:@"name: %@\nspecialization: %@\nacceptedPatients: %@",
-            self.name,
-            self.specialization,
-            self.acceptedPatients];
+    return [NSString stringWithFormat:@"<%@, %@, %@>\n", self.name, self.specialization, self.acceptedPatients];
 }
 
 @end

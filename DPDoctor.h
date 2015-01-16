@@ -8,7 +8,6 @@
 
 #import <Foundation/Foundation.h>
 #import "DPPerson.h"
-#import "DPDoctorSymptomsKnowledgeBase.h"
 
 @class DPPatient;
 
@@ -20,7 +19,7 @@
 - (NSString *)whatIsYourSpecialization;
 - (NSString *)whatIsYourName;
 - (void)trackPatient:(DPPatient *)patient;
-- (NSString *)requestMedication:(NSArray *)symptoms forPatient:(DPPatient *)patient;
+- (void)requestMedication:(NSArray *)symptoms forPatient:(DPPatient *)patient;
 - (id)initWithName:(NSString *)name andSpecialization:(NSString *)specialization;
 
 @end

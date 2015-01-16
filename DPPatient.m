@@ -39,7 +39,7 @@
 
 #pragma mark - Override
 - (NSString *)description {
-    return [NSString stringWithFormat:@"name: %@\nage: %@\noccupation: %@\n", self.name, self.age, self.occupation];
+    return [NSString stringWithFormat:@"<%@, %@, %@>\n", self.name, self.age, self.occupation];
 }
 
 @end
